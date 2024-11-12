@@ -1,59 +1,93 @@
 
+/* Reset and Base Styling */
 body {
-    font-family: Arial, sans-serif;
     margin: 0;
-    padding: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
 }
 
+/* Hero Section */
 .hero {
-    background: linear-gradient(to bottom, #000428, #004e92);
-    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background: linear-gradient(135deg, #ece9e6, #ffffff);
     text-align: center;
-    padding: 50px 20px;
+    padding: 20px;
 }
 
 .hero-content h1 {
-    font-size: 3em;
+    font-size: 3.5em;
+    margin: 0;
 }
 
+.subtitle {
+    font-size: 1.2em;
+    color: #555;
+    margin-top: 10px;
+}
+
+.cta-button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background: #007aff;
+    color: white;
+    border: none;
+    border-radius: 25px;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+    background: #005bb5;
+}
+
+/* Features Section */
 .features {
-    padding: 20px;
+    padding: 50px 20px;
+    background: #f9f9f9;
     text-align: center;
 }
 
-.feature-cards {
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
+.section-title {
+    font-size: 2.5em;
+    margin-bottom: 20px;
 }
 
-.card {
-    background: #f9f9f9;
-    border: 1px solid #ddd;
-    border-radius: 8px;
+.feature-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.feature-card {
+    background: white;
     padding: 20px;
-    margin: 10px;
-    width: 30%;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease;
 }
 
+.feature-card:hover {
+    transform: translateY(-10px);
+}
+
+/* Demo Section */
 .demo {
-    padding: 20px;
+    padding: 50px 20px;
     text-align: center;
 }
 
 .demo-video {
-    width: 80%;
-    border-radius: 10px;
+    width: 100%;
+    max-width: 800px;
+    border-radius: 15px;
 }
 
-footer {
-    text-align: center;
-    padding: 20px;
-    background: #000428;
-    color: white;
-}
-
+/* Modal */
 .modal {
     position: fixed;
     top: 0;
@@ -72,9 +106,19 @@ footer {
 
 .modal-content {
     background: white;
-    padding: 20px;
-    border-radius: 8px;
-    text-align: center;
-    width: 80%;
+    padding: 30px;
+    border-radius: 15px;
+    width: 90%;
     max-width: 500px;
+    text-align: center;
+}
+
+.submit-button, .close-button {
+    margin-top: 15px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 25px;
+    background: #007aff;
+    color: white;
+    cursor: pointer;
 }
